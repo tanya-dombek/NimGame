@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIM game</title>
+    <link rel="stylesheet" href="./css.css">
+</head>
+
+<body>
+<div id="main">
+    <div id="header">
+        <h1 id="nim">Welcome to the NIM GAME!</h1>
+        <p id="rules">
+            You have two options: to choose a mode where you can enter a range, the computer will play with random
+            numbers. <br>
+            The second option is a mode where the computer uses winning strategy for the game from 0 to 100 and adding
+            numbers from 1 to 9. <br>
+            The first player who will get the sum equivalent the sum you'll choose below will be the winner! Good luck! <br>
+        </p>
+        <button class="btn" id="easyModeBtn" onclick="intervalvisible()">Ordinary Game</button>
+        <button class="btn" id="hardModeBtn" onclick="intervalvisible()">The Computer Uses winning mode</button>
+        <button class="btn" id="btnReset" onclick="window.location.reload()">Play Again!</button>
+    </div>
+
+    <div id="interval">
+        <div>
+        <label>We are playing from 0 to:</label>
+        <input class="input" type="number" id="inputMax">
+        </div>
+        <div>
+        <label>And adding the numbers from 1 to:</label>
+        <input class="input" type="number" id='inputAddMax'>
+        </div>
+        <button class="btn" id="btnStart"  onclick="endingvisible()">Start the game</button>
+        <p id="whoFirst"></p>
+    </div>
+
+    <div id="ending">
+        <p id="whoIsTurn"></p>
+        Add your number to the sum:
+        <input class="input" type="number" id="humanInput">
+        <p id="poleMistake"></p>
+
+        <p id="inputTurn"></p>
+        <div class="btn2" id="humanturn">
+            <button class="btn" id="FinishBtn" style="width: 250px;">Add my number</button>
+            <p id="humanNumber">Trials:</p>
+        </div>
+
+        <div class="btn2" id="sectionEndTwo">
+            <button class="btn" id="btnComputerTurn" style="width: 250px;">Computer turn</button>
+            <p id="machineNumber">Trials: </p>
+        </div>
+        
+    </div>
+
+
+    <div id="result">
+        <h2 id='currSum'>Current SUM = 0 </h2>
+        <h2 id="itog"></h2>
+    </div>
+
+    <script src='./js.js'></script>
+</div>
+</body>
+
+</html>
